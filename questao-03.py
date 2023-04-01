@@ -4,13 +4,13 @@ import json
 with open('faturamento.json', 'r') as file:
     faturamento = json.load(file)
 
-# Inicializa as variáveis
+# Variáveis
 menor = float('inf')
 maior = float('-inf')
 soma = 0
 dias_acima_media = 0
 
-# Percorre os valores de faturamento e atualiza as variáveis
+# Incrementa os valores
 for valor in faturamento.values():
     if valor == 0: # Ignora dias sem faturamento
         continue
@@ -20,10 +20,10 @@ for valor in faturamento.values():
         maior = valor
     soma += valor
 
-# Calcula a média de faturamento mensal (considerando apenas os dias com faturamento)
+# Calcula a média de faturamento mensal
 media = soma / len([valor for valor in faturamento.values() if valor != 0])
 
-# Conta o número de dias com faturamento superior à média
+# Contador de com faturamento superior à média
 for valor in faturamento.values():
     if valor > media:
         dias_acima_media += 1
