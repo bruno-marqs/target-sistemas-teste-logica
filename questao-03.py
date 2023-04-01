@@ -20,3 +20,15 @@ for valor in faturamento.values():
         maior = valor
     soma += valor
 
+# Calcula a média de faturamento mensal (considerando apenas os dias com faturamento)
+media = soma / len([valor for valor in faturamento.values() if valor != 0])
+
+# Conta o número de dias com faturamento superior à média
+for valor in faturamento.values():
+    if valor > media:
+        dias_acima_media += 1
+
+# Imprime os resultados
+print(f"Menor valor de faturamento: {menor}")
+print(f"Maior valor de faturamento: {maior}")
+print(f"Número de dias com faturamento acima da média: {dias_acima_media}")
