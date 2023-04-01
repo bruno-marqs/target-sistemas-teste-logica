@@ -6,4 +6,4 @@ while K < INDICE:
     K = K + 1
     SOMA = SOMA + K
 
-print(SOMA)
+print(f"O resultado no fim do laço é: {SOMA}")

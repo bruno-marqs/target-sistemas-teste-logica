@@ -16,7 +16,7 @@ percent_es = (fat_es / fat_total) * 100
 percent_outros = (fat_outros / fat_total) * 100
 
 # Imprimindo os resultados
-print("Percentual de representação no faturamento total:\n")
+print(f"Percentual de representação no faturamento total:\n")
 print("Sao Paulo: ....... {:.2f}%".format(percent_sp))
 print("Rio de Janeiro: .. {:.2f}%".format(percent_rj))
 print("Minas Gerais: .... {:.2f}%".format(percent_mg))
